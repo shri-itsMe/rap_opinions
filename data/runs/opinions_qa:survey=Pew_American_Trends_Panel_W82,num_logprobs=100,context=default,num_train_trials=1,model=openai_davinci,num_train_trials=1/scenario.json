@@ -1,0 +1,9 @@
+{
+  "name": "opinions-qa",
+  "description": "Subjective questions dataset based on Pew American Trends Panel opinion polls.",
+  "tags": [
+    "multiple_choice"
+  ],
+  "output_path": "benchmark_output/scenarios/opinions-qa/data",
+  "definition_path": "https://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/opinions_qa_scenario.py"
+}

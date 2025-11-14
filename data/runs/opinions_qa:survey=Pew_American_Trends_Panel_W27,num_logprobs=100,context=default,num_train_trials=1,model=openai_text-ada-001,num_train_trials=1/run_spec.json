@@ -1,0 +1,60 @@
+{
+  "name": "opinions_qa:survey=Pew_American_Trends_Panel_W27,num_logprobs=100,context=default,num_train_trials=1,model=openai_text-ada-001,num_train_trials=1",
+  "scenario_spec": {
+    "class_name": "helm.benchmark.scenarios.opinions_qa_scenario.OpinionsQAScenario",
+    "args": {
+      "survey_type": "Pew_American_Trends_Panel_W27",
+      "context": "default"
+    }
+  },
+  "adapter_spec": {
+    "method": "multiple_choice_joint",
+    "global_prefix": "",
+    "instructions": "",
+    "input_prefix": "Question: ",
+    "input_suffix": "\n",
+    "reference_prefix": "A. ",
+    "reference_suffix": "\n",
+    "output_prefix": "Answer: ",
+    "output_suffix": "\n",
+    "instance_prefix": "\n",
+    "substitutions": [],
+    "max_train_instances": 0,
+    "max_eval_instances": 1000,
+    "num_outputs": 100,
+    "num_train_trials": 1,
+    "sample_train": false,
+    "model": "openai/text-ada-001",
+    "temperature": 0.0,
+    "max_tokens": 1,
+    "stop_sequences": [
+      "\n"
+    ]
+  },
+  "metric_specs": [
+    {
+      "class_name": "helm.benchmark.basic_metrics.BasicMetric",
+      "args": {
+        "names": [
+          "exact_match",
+          "quasi_exact_match",
+          "prefix_exact_match",
+          "quasi_prefix_exact_match"
+        ]
+      }
+    }
+  ],
+  "data_augmenter_spec": {
+    "perturbation_specs": [],
+    "should_augment_train_instances": false,
+    "should_include_original_train": false,
+    "should_skip_unchanged_train": false,
+    "should_augment_eval_instances": false,
+    "should_include_original_eval": false,
+    "should_skip_unchanged_eval": false,
+    "seeds_per_instance": 1
+  },
+  "groups": [
+    "opinions-qa"
+  ]
+}

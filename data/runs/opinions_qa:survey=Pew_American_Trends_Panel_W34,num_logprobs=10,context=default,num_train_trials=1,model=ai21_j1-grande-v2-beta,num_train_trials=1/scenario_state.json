@@ -1,0 +1,6348 @@
+{
+  "adapter_spec": {
+    "method": "multiple_choice_joint",
+    "global_prefix": "",
+    "instructions": "",
+    "input_prefix": "Question: ",
+    "input_suffix": "\n",
+    "reference_prefix": "A. ",
+    "reference_suffix": "\n",
+    "output_prefix": "Answer: ",
+    "output_suffix": "\n",
+    "instance_prefix": "\n",
+    "substitutions": [],
+    "max_train_instances": 0,
+    "max_eval_instances": 1000,
+    "num_outputs": 10,
+    "num_train_trials": 1,
+    "sample_train": false,
+    "model": "ai21/j1-grande-v2-beta",
+    "temperature": 0.0,
+    "max_tokens": 1,
+    "stop_sequences": [
+      "\n"
+    ]
+  },
+  "request_states": [
+    {
+      "instance": {
+        "input": {
+          "text": "Overall, do you think science has made life easier or more difficult for most people?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Easier"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "More difficult"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id0"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Easier",
+        "B": "More difficult",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Overall, do you think science has made life easier or more difficult for most people?\nA. Easier\nB. More difficult\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.5811951160430908,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.5811951160430908,
+                "top_logprobs": {
+                  "\n": -1.5811951160430908,
+                  " Easier": -2.096820116043091,
+                  " A": -2.471820116043091,
+                  " ": -2.721820116043091,
+                  " A.": -2.753070116043091,
+                  " Refuse": -3.042132616043091,
+                  " B": -3.745257616043091,
+                  " More": -3.979632616043091,
+                  " C": -4.174944877624512,
+                  " B.": -4.174944877624512
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 1.9664556980133057,
+        "request_datetime": 1679098259
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think science has had a mostly positive or mostly negative effect on the quality of food in the U.S.?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Mostly positive"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Mostly negative"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id1"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Mostly positive",
+        "B": "Mostly negative",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think science has had a mostly positive or mostly negative effect on the quality of food in the U.S.?\nA. Mostly positive\nB. Mostly negative\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " Mostly",
+            "logprob": -1.9398670196533203,
+            "tokens": [
+              {
+                "text": " Mostly",
+                "logprob": -1.9398670196533203,
+                "top_logprobs": {
+                  " Mostly": -1.9398670196533203,
+                  "\n": -2.0961170196533203,
+                  " A": -2.4711170196533203,
+                  " ": -2.7758045196533203,
+                  " A.": -2.9008045196533203,
+                  " B.": -2.9789295196533203,
+                  " B": -3.0492420196533203,
+                  " C.": -3.1039295196533203,
+                  " C": -3.3070545196533203,
+                  " Refuse": -4.18986701965332
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 1.96842360496521,
+        "request_datetime": 1679098259
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think science has had a mostly positive or mostly negative effect on the quality of Health care in the U.S.?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Mostly positive"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Mostly negative"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id2"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Mostly positive",
+        "B": "Mostly negative",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think science has had a mostly positive or mostly negative effect on the quality of Health care in the U.S.?\nA. Mostly positive\nB. Mostly negative\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.4735186100006104,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.4735186100006104,
+                "top_logprobs": {
+                  "\n": -1.4735186100006104,
+                  " A": -2.2625811100006104,
+                  " Mostly": -2.5594561100006104,
+                  " ": -2.8485186100006104,
+                  " A.": -2.8797686100006104,
+                  " B": -3.0047686100006104,
+                  " C": -3.2391436100006104,
+                  " B.": -3.5360186100006104,
+                  " C.": -3.5985186100006104,
+                  " Refuse": -3.7625811100006104
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 1.964280128479004,
+        "request_datetime": 1679098259
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think science has had a mostly positive or mostly negative effect on the quality of the environment in the U.S.?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Mostly positive"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Mostly negative"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id3"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Mostly positive",
+        "B": "Mostly negative",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think science has had a mostly positive or mostly negative effect on the quality of the environment in the U.S.?\nA. Mostly positive\nB. Mostly negative\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " Mostly",
+            "logprob": -1.8314489126205444,
+            "tokens": [
+              {
+                "text": " Mostly",
+                "logprob": -1.8314489126205444,
+                "top_logprobs": {
+                  " Mostly": -1.8314489126205444,
+                  "\n": -2.026761531829834,
+                  " A": -2.370511531829834,
+                  " ": -2.745511531829834,
+                  " B.": -2.979886531829834,
+                  " B": -3.065824031829834,
+                  " A.": -3.065824031829834,
+                  " C": -3.120511531829834,
+                  " C.": -3.198636531829834,
+                  " Refuse": -4.026761531829834
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 1.9243454933166504,
+        "request_datetime": 1679098259
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "In your opinion, do you think government investments in basic scientific research usually pay off in the long run, or are they not worth it?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Government investments usually pay off in the long run"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Government investments aren't worth it"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id4"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Government investments usually pay off in the long run",
+        "B": "Government investments aren't worth it",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: In your opinion, do you think government investments in basic scientific research usually pay off in the long run, or are they not worth it?\nA. Government investments usually pay off in the long run\nB. Government investments aren't worth it\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.537672996520996,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.537672996520996,
+                "top_logprobs": {
+                  "\n": -1.537672996520996,
+                  " A": -2.061110496520996,
+                  " A.": -2.186110496520996,
+                  " ": -2.920485496520996,
+                  " B": -3.115797996520996,
+                  " B.": -3.373610496520996,
+                  " \"": -3.920485496520996,
+                  " Government": -3.943922996520996,
+                  " C": -4.076735496520996,
+                  " C.": -4.318922996520996
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3133509159088135,
+        "request_datetime": 1679098261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "In your opinion, do you think government investments in engineering and technology usually pay off in the long run, or are they not worth it?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Government investments usually pay off in the long run"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Government investments aren't worth it"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id5"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Government investments usually pay off in the long run",
+        "B": "Government investments aren't worth it",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: In your opinion, do you think government investments in engineering and technology usually pay off in the long run, or are they not worth it?\nA. Government investments usually pay off in the long run\nB. Government investments aren't worth it\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.692571759223938,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.692571759223938,
+                "top_logprobs": {
+                  "\n": -1.692571759223938,
+                  " A": -1.973821759223938,
+                  " A.": -2.0285091400146484,
+                  " ": -2.9425716400146484,
+                  " B": -3.2472591400146484,
+                  " B.": -3.3722591400146484,
+                  " Government": -3.4503841400146484,
+                  " \"": -4.059759140014648,
+                  " C": -4.192571640014648,
+                  " C.": -4.528509140014648
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3251628875732422,
+        "request_datetime": 1679098261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "In your opinion, do you think government investments in medical research usually pay off in the long run, or are they not worth it?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Government investments usually pay off in the long run"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Government investments aren't worth it"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id6"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Government investments usually pay off in the long run",
+        "B": "Government investments aren't worth it",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: In your opinion, do you think government investments in medical research usually pay off in the long run, or are they not worth it?\nA. Government investments usually pay off in the long run\nB. Government investments aren't worth it\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.5974360704421997,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.5974360704421997,
+                "top_logprobs": {
+                  "\n": -1.5974360704421997,
+                  " A": -1.9568110704421997,
+                  " A.": -2.06618595123291,
+                  " ": -3.01149845123291,
+                  " B": -3.12868595123291,
+                  " B.": -3.35524845123291,
+                  " \"": -3.90993595123291,
+                  " Government": -4.06618595123291,
+                  " C": -4.20681095123291,
+                  " Refuse": -4.20681095123291
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.46725964546203613,
+        "request_datetime": 1679098261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Which statement comes closer to your view, even if neither is exactly right?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Government investment in research is essential for scientific progress"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Private investment will ensure that enough scientific progress is made, even without government investment"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id7"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Government investment in research is essential for scientific progress",
+        "B": "Private investment will ensure that enough scientific progress is made, even without government investment",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Which statement comes closer to your view, even if neither is exactly right?\nA. Government investment in research is essential for scientific progress\nB. Private investment will ensure that enough scientific progress is made, even without government investment\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.9791308641433716,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.9791308641433716,
+                "top_logprobs": {
+                  " A": -1.9791308641433716,
+                  " C": -2.190068244934082,
+                  " B": -2.221318244934082,
+                  "\n": -2.354130744934082,
+                  " C.": -2.799443244934082,
+                  " ": -3.033818244934082,
+                  " A.": -3.151005744934082,
+                  " Refuse": -3.221318244934082,
+                  " B.": -3.455693244934082,
+                  " D": -4.080693244934082
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.4662587642669678,
+        "request_datetime": 1679098261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "All in all, do you favor or oppose the use of animals in scientific research?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Favor"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Oppose"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id8"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Favor",
+        "B": "Oppose",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: All in all, do you favor or oppose the use of animals in scientific research?\nA. Favor\nB. Oppose\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " Favor",
+            "logprob": -1.1621179580688477,
+            "tokens": [
+              {
+                "text": " Favor",
+                "logprob": -1.1621179580688477,
+                "top_logprobs": {
+                  " Favor": -1.1621179580688477,
+                  " A": -2.0761804580688477,
+                  " ": -2.1855554580688477,
+                  "\n": -2.4902429580688477,
+                  " A.": -3.2793054580688477,
+                  " B": -3.6621179580688477,
+                  " Refuse": -3.7636804580688477,
+                  " \"": -4.107430458068848,
+                  " B.": -4.294930458068848,
+                  " C": -4.451180458068848
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3219892978668213,
+        "request_datetime": 1679098261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How often do you choose foods to eat because they are healthy and nutritious?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "All of the time"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "More than half of the time"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "About half of the time"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Less than half of the time"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Never"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id9"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "All of the time",
+        "B": "More than half of the time",
+        "C": "About half of the time",
+        "D": "Less than half of the time",
+        "E": "Never",
+        "F": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How often do you choose foods to eat because they are healthy and nutritious?\nA. All of the time\nB. More than half of the time\nC. About half of the time\nD. Less than half of the time\nE. Never\nF. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -2.0596821308135986,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -2.0596821308135986,
+                "top_logprobs": {
+                  " A": -2.0596821308135986,
+                  " B": -2.0987446308135986,
+                  "\n": -2.2081196308135986,
+                  " C": -2.3018696308135986,
+                  " D": -2.6846821308135986,
+                  " E": -3.0128071308135986,
+                  " C.": -3.0674946308135986,
+                  " A.": -3.0831196308135986,
+                  " B.": -3.3174946308135986,
+                  " ": -3.4190571308135986
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.3378429412841797,
+        "request_datetime": 1679097000
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How often do you choose foods to eat because they are easy and most convenient?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "All of the time"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "More than half of the time"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "About half of the time"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Less than half of the time"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Never"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id10"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "All of the time",
+        "B": "More than half of the time",
+        "C": "About half of the time",
+        "D": "Less than half of the time",
+        "E": "Never",
+        "F": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How often do you choose foods to eat because they are easy and most convenient?\nA. All of the time\nB. More than half of the time\nC. About half of the time\nD. Less than half of the time\nE. Never\nF. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.9743306636810303,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.9743306636810303,
+                "top_logprobs": {
+                  " A": -1.9743306636810303,
+                  " B": -2.0993306636810303,
+                  " C": -2.3962056636810303,
+                  "\n": -2.4508931636810303,
+                  " D": -2.7087056636810303,
+                  " A.": -2.8571431636810303,
+                  " C.": -2.9508931636810303,
+                  " E": -3.0915181636810303,
+                  " B.": -3.2712056636810303,
+                  " ": -3.4977681636810303
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 2.3621275424957275,
+        "request_datetime": 1679097000
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Which of the following, if any, do you restrict or limit eating on a regular basis? Cholesterol"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Not selected"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Cholesterol"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id11"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Not selected",
+        "B": "Cholesterol"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Which of the following, if any, do you restrict or limit eating on a regular basis? Cholesterol\nA. Not selected\nB. Cholesterol\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " Cholesterol",
+            "logprob": -1.8512165546417236,
+            "tokens": [
+              {
+                "text": " Cholesterol",
+                "logprob": -1.8512165546417236,
+                "top_logprobs": {
+                  " Cholesterol": -1.8512165546417236,
+                  "\n": -1.9918415546417236,
+                  " B": -2.0543415546417236,
+                  " B.": -2.3434040546417236,
+                  " C": -2.7887165546417236,
+                  " A.": -2.9918415546417236,
+                  " A": -3.0074665546417236,
+                  " ": -3.0934040546417236,
+                  " Not": -3.6402790546417236,
+                  " None": -4.2965288162231445
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.32189202308654785,
+        "request_datetime": 1679098261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Which of the following, if any, do you restrict or limit eating on a regular basis? Sugar"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Not selected"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Sugar"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id12"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Not selected",
+        "B": "Sugar"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Which of the following, if any, do you restrict or limit eating on a regular basis? Sugar\nA. Not selected\nB. Sugar\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " Sugar",
+            "logprob": -1.1222245693206787,
+            "tokens": [
+              {
+                "text": " Sugar",
+                "logprob": -1.1222245693206787,
+                "top_logprobs": {
+                  " Sugar": -1.1222245693206787,
+                  "\n": -1.9581620693206787,
+                  " ": -2.5597245693206787,
+                  " B": -2.6456620693206787,
+                  " A": -3.1612870693206787,
+                  " B.": -3.3565995693206787,
+                  " Not": -3.3644120693206787,
+                  " A.": -3.6378495693206787,
+                  " C": -3.8722245693206787,
+                  " None": -4.231599807739258
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.5786845684051514,
+        "request_datetime": 1679098261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Which of the following, if any, do you restrict or limit eating on a regular basis? Artificial preservatives"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Not selected"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Artificial preservatives"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id13"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Not selected",
+        "B": "Artificial preservatives"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Which of the following, if any, do you restrict or limit eating on a regular basis? Artificial preservatives\nA. Not selected\nB. Artificial preservatives\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " Artificial",
+            "logprob": -0.9945598840713501,
+            "tokens": [
+              {
+                "text": " Artificial",
+                "logprob": -0.9945598840713501,
+                "top_logprobs": {
+                  " Artificial": -0.9945598840713501,
+                  "\n": -2.2211222648620605,
+                  " B": -2.4320597648620605,
+                  " ": -2.7914347648620605,
+                  " B.": -3.2133097648620605,
+                  " A": -3.3383097648620605,
+                  " Not": -3.4242472648620605,
+                  " A.": -3.4242472648620605,
+                  " None": -4.1664347648620605,
+                  " Yes": -4.3617472648620605
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3806498050689697,
+        "request_datetime": 1679098261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Which of the following, if any, do you restrict or limit eating on a regular basis? Artificial colors"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Not selected"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Artificial colors"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id14"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Not selected",
+        "B": "Artificial colors"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Which of the following, if any, do you restrict or limit eating on a regular basis? Artificial colors\nA. Not selected\nB. Artificial colors\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " Artificial",
+            "logprob": -0.9520984888076782,
+            "tokens": [
+              {
+                "text": " Artificial",
+                "logprob": -0.9520984888076782,
+                "top_logprobs": {
+                  " Artificial": -0.9520984888076782,
+                  "\n": -2.3427233695983887,
+                  " B": -2.3661608695983887,
+                  " ": -2.8974108695983887,
+                  " A": -3.1161608695983887,
+                  " A.": -3.1942858695983887,
+                  " B.": -3.2645983695983887,
+                  " Not": -3.6317858695983887,
+                  " C": -4.241160869598389,
+                  " None": -4.366160869598389
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3626840114593506,
+        "request_datetime": 1679098261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Which of the following, if any, do you restrict or limit eating on a regular basis? Artificial sweeteners"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Not selected"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Artificial sweeteners"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id15"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Not selected",
+        "B": "Artificial sweeteners"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Which of the following, if any, do you restrict or limit eating on a regular basis? Artificial sweeteners\nA. Not selected\nB. Artificial sweeteners\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " Artificial",
+            "logprob": -0.9433866739273071,
+            "tokens": [
+              {
+                "text": " Artificial",
+                "logprob": -0.9433866739273071,
+                "top_logprobs": {
+                  " Artificial": -0.9433866739273071,
+                  "\n": -2.3183865547180176,
+                  " B": -2.4511990547180176,
+                  " ": -2.8105740547180176,
+                  " B.": -3.0683865547180176,
+                  " Not": -3.3808865547180176,
+                  " A": -3.4668240547180176,
+                  " A.": -3.5136990547180176,
+                  " None": -4.224636554718018,
+                  " Yes": -4.334011554718018
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.2984919548034668,
+        "request_datetime": 1679098261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Which of the following, if any, do you restrict or limit eating on a regular basis? Gluten"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Not selected"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Gluten"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id16"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Not selected",
+        "B": "Gluten"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Which of the following, if any, do you restrict or limit eating on a regular basis? Gluten\nA. Not selected\nB. Gluten\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " Gluten",
+            "logprob": -1.526570200920105,
+            "tokens": [
+              {
+                "text": " Gluten",
+                "logprob": -1.526570200920105,
+                "top_logprobs": {
+                  " Gluten": -1.526570200920105,
+                  "\n": -1.784382700920105,
+                  " B": -2.0812578201293945,
+                  " A": -2.6984453201293945,
+                  " ": -2.8937578201293945,
+                  " B.": -2.9250078201293945,
+                  " Not": -3.3156328201293945,
+                  " C": -3.4796953201293945,
+                  " A.": -3.7765703201293945,
+                  " Yes": -4.4796953201293945
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.30814409255981445,
+        "request_datetime": 1679098262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Which of the following, if any, do you restrict or limit eating on a regular basis? None of these"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Not selected"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "None of these"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id17"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Not selected",
+        "B": "None of these"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Which of the following, if any, do you restrict or limit eating on a regular basis? None of these\nA. Not selected\nB. None of these\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " B",
+            "logprob": -1.5739002227783203,
+            "tokens": [
+              {
+                "text": " B",
+                "logprob": -1.5739002227783203,
+                "top_logprobs": {
+                  " B": -1.5739002227783203,
+                  " A": -2.1910877227783203,
+                  "\n": -2.4957752227783203,
+                  " Not": -2.8707752227783203,
+                  " C": -2.8785877227783203,
+                  " ": -2.9801502227783203,
+                  " B.": -3.0660877227783203,
+                  " None of these": -3.1754627227783203,
+                  " None": -3.5973377227783203,
+                  " A.": -3.8317127227783203
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.2942802906036377,
+        "request_datetime": 1679098262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How much of the food you eat is organic?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Most of it"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Some of it"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too much"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "None at all"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id18"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Most of it",
+        "B": "Some of it",
+        "C": "Not too much",
+        "D": "None at all",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How much of the food you eat is organic?\nA. Most of it\nB. Some of it\nC. Not too much\nD. None at all\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.9230220317840576,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.9230220317840576,
+                "top_logprobs": {
+                  "\n": -1.9230220317840576,
+                  " B": -2.4152095317840576,
+                  " A": -2.4386470317840576,
+                  " C": -2.8761470317840576,
+                  " ": -2.9152095317840576,
+                  " D": -2.9464595317840576,
+                  " E": -2.9777095317840576,
+                  " E.": -3.6261470317840576,
+                  " A.": -3.6886470317840576,
+                  " B.": -3.8136470317840576
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 2.389782428741455,
+        "request_datetime": 1679097000
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think organic fruits and vegetables are generally"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Better for one's health than conventionally grown foods"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Worse for one's health than conventionally grown foods"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Neither better nor worse for one's health than conventionally grown foods"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id19"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Better for one's health than conventionally grown foods",
+        "B": "Worse for one's health than conventionally grown foods",
+        "C": "Neither better nor worse for one's health than conventionally grown foods",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think organic fruits and vegetables are generally\nA. Better for one's health than conventionally grown foods\nB. Worse for one's health than conventionally grown foods\nC. Neither better nor worse for one's health than conventionally grown foods\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -2.0017449855804443,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -2.0017449855804443,
+                "top_logprobs": {
+                  "\n": -2.0017449855804443,
+                  " A": -2.2908074855804443,
+                  " C": -2.5720574855804443,
+                  " B": -2.5720574855804443,
+                  " C.": -2.7204949855804443,
+                  " D": -2.8611199855804443,
+                  " D.": -2.8767449855804443,
+                  " A.": -2.9704949855804443,
+                  " ": -3.0486199855804443,
+                  " B.": -3.5720574855804443
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 2.3256282806396484,
+        "request_datetime": 1679097000
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How much health risk, if any, does eating fruits and vegetables grown with pesticides have for the average person over the course of their lifetime?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A great deal of health risk"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Some health risk"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too much health risk"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "No health risk at all"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id20"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A great deal of health risk",
+        "B": "Some health risk",
+        "C": "Not too much health risk",
+        "D": "No health risk at all",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How much health risk, if any, does eating fruits and vegetables grown with pesticides have for the average person over the course of their lifetime?\nA. A great deal of health risk\nB. Some health risk\nC. Not too much health risk\nD. No health risk at all\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " C.",
+            "logprob": -2.094909429550171,
+            "tokens": [
+              {
+                "text": " C.",
+                "logprob": -2.094909429550171,
+                "top_logprobs": {
+                  " C.": -2.094909429550171,
+                  " D.": -2.508971929550171,
+                  " C": -2.508971929550171,
+                  " E": -2.649596929550171,
+                  " B.": -2.688659429550171,
+                  " E.": -2.696471929550171,
+                  " B": -2.774596929550171,
+                  "\n": -2.938659429550171,
+                  " D": -3.040221929550171,
+                  " A": -3.196471929550171
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3482325077056885,
+        "request_datetime": 1679098262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How much health risk, if any, does eating meat from animals that have been given antibiotics or hormones have for the average person over the course of their lifetime?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A great deal of health risk"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Some health risk"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too much health risk"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "No health risk at all"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id21"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A great deal of health risk",
+        "B": "Some health risk",
+        "C": "Not too much health risk",
+        "D": "No health risk at all",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How much health risk, if any, does eating meat from animals that have been given antibiotics or hormones have for the average person over the course of their lifetime?\nA. A great deal of health risk\nB. Some health risk\nC. Not too much health risk\nD. No health risk at all\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " C.",
+            "logprob": -2.4425039291381836,
+            "tokens": [
+              {
+                "text": " C.",
+                "logprob": -2.4425039291381836,
+                "top_logprobs": {
+                  " C.": -2.4425039291381836,
+                  " B": -2.5909414291381836,
+                  " C": -2.6143789291381836,
+                  " B.": -2.6300039291381836,
+                  "\n": -2.6456289291381836,
+                  " E": -2.7315664291381836,
+                  " A": -2.7940664291381836,
+                  " D.": -2.8253164291381836,
+                  " E.": -2.8800039291381836,
+                  " D": -2.9659414291381836
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 2.193020820617676,
+        "request_datetime": 1679097000
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How much health risk, if any, does eating food and drinks with artificial coloring have for the average person over the course of their lifetime?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A great deal of health risk"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Some health risk"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too much health risk"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "No health risk at all"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id22"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A great deal of health risk",
+        "B": "Some health risk",
+        "C": "Not too much health risk",
+        "D": "No health risk at all",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How much health risk, if any, does eating food and drinks with artificial coloring have for the average person over the course of their lifetime?\nA. A great deal of health risk\nB. Some health risk\nC. Not too much health risk\nD. No health risk at all\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " C.",
+            "logprob": -2.345085382461548,
+            "tokens": [
+              {
+                "text": " C.",
+                "logprob": -2.345085382461548,
+                "top_logprobs": {
+                  " C.": -2.345085382461548,
+                  " C": -2.540397882461548,
+                  " E": -2.665397882461548,
+                  " B": -2.696647882461548,
+                  " B.": -2.712272882461548,
+                  "\n": -2.720085382461548,
+                  " A": -2.782585382461548,
+                  " D.": -2.876335382461548,
+                  " E.": -2.962272882461548,
+                  " D": -3.079460382461548
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.9009227752685547,
+        "request_datetime": 1679097003
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How much health risk, if any, does eating food and drinks with artificial preservatives have for the average person over the course of their lifetime?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A great deal of health risk"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Some health risk"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too much health risk"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "No health risk at all"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id23"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A great deal of health risk",
+        "B": "Some health risk",
+        "C": "Not too much health risk",
+        "D": "No health risk at all",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How much health risk, if any, does eating food and drinks with artificial preservatives have for the average person over the course of their lifetime?\nA. A great deal of health risk\nB. Some health risk\nC. Not too much health risk\nD. No health risk at all\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " C.",
+            "logprob": -2.3860294818878174,
+            "tokens": [
+              {
+                "text": " C.",
+                "logprob": -2.3860294818878174,
+                "top_logprobs": {
+                  " C.": -2.3860294818878174,
+                  " C": -2.5813419818878174,
+                  " B": -2.6204044818878174,
+                  " B.": -2.6282169818878174,
+                  " E": -2.6516544818878174,
+                  "\n": -2.7141544818878174,
+                  " D.": -2.8000919818878174,
+                  " A": -2.8860294818878174,
+                  " E.": -2.9094669818878174,
+                  " D": -3.0422794818878174
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.8951046466827393,
+        "request_datetime": 1679097003
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Which of these statements comes closer to your view, even if neither is exactly right?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "The average person is exposed to additives in the food they eat every day, which pose a serious risk to their health"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "The average person is exposed to additives in the food they eat every day but they eat such a small amount that this doe"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id24"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "The average person is exposed to additives in the food they eat every day, which pose a serious risk to their health",
+        "B": "The average person is exposed to additives in the food they eat every day but they eat such a small amount that this doe",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Which of these statements comes closer to your view, even if neither is exactly right?\nA. The average person is exposed to additives in the food they eat every day, which pose a serious risk to their health\nB. The average person is exposed to additives in the food they eat every day but they eat such a small amount that this doe\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -2.0493295192718506,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -2.0493295192718506,
+                "top_logprobs": {
+                  "\n": -2.0493295192718506,
+                  " C": -2.3305795192718506,
+                  " C.": -2.3383920192718506,
+                  " Refuse": -2.5415170192718506,
+                  " A": -2.6118295192718506,
+                  " ": -2.6587045192718506,
+                  " B": -2.9633920192718506,
+                  " A.": -3.3071420192718506,
+                  " B.": -3.7290170192718506,
+                  " D": -4.42432975769043
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3370997905731201,
+        "request_datetime": 1679098262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Genetically modified foods come from a technique that adds genes from other organisms to change that food's genetic characteristics. How much, if anything, have you heard or read about foods with genetically modified ingredients?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A lot"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "A little"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Nothing at all"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id25"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A lot",
+        "B": "A little",
+        "C": "Nothing at all",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Genetically modified foods come from a technique that adds genes from other organisms to change that food's genetic characteristics. How much, if anything, have you heard or read about foods with genetically modified ingredients?\nA. A lot\nB. A little\nC. Nothing at all\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.9164923429489136,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.9164923429489136,
+                "top_logprobs": {
+                  " A": -1.9164923429489136,
+                  "\n": -2.393054962158203,
+                  " ": -2.752429962158203,
+                  " C.": -2.814929962158203,
+                  " B.": -2.924304962158203,
+                  " B": -2.939929962158203,
+                  " A.": -3.002429962158203,
+                  " C": -3.236804962158203,
+                  " D": -3.486804962158203,
+                  " D.": -3.728992462158203
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3875300884246826,
+        "request_datetime": 1679098262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think foods with genetically modified ingredients are generally"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Better for your health than foods with no genetically modified ingredients"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Worse for your health than foods with no genetically modified ingredients"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Neither better nor worse for your health than foods with no genetically modified ingredients"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not sure"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id26"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Better for your health than foods with no genetically modified ingredients",
+        "B": "Worse for your health than foods with no genetically modified ingredients",
+        "C": "Neither better nor worse for your health than foods with no genetically modified ingredients",
+        "D": "Not sure",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think foods with genetically modified ingredients are generally\nA. Better for your health than foods with no genetically modified ingredients\nB. Worse for your health than foods with no genetically modified ingredients\nC. Neither better nor worse for your health than foods with no genetically modified ingredients\nD. Not sure\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.6839433908462524,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.6839433908462524,
+                "top_logprobs": {
+                  "\n": -1.6839433908462524,
+                  " C.": -2.699568271636963,
+                  " D": -2.738630771636963,
+                  " C": -2.769880771636963,
+                  " B": -2.801130771636963,
+                  " D.": -2.918318271636963,
+                  " B.": -3.129255771636963,
+                  " E": -3.137068271636963,
+                  " E.": -3.238630771636963,
+                  " ": -3.246443271636963
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3763124942779541,
+        "request_datetime": 1679098262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Even if you are not sure, which is closer to your views? Do you think foods with genetically modified ingredients are generally"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Better for your health than foods with no genetically modified ingredients"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Worse for your health than foods with no genetically modified ingredients"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Neither better nor worse for your health than foods with no genetically modified ingredients"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id27"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Better for your health than foods with no genetically modified ingredients",
+        "B": "Worse for your health than foods with no genetically modified ingredients",
+        "C": "Neither better nor worse for your health than foods with no genetically modified ingredients",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Even if you are not sure, which is closer to your views? Do you think foods with genetically modified ingredients are generally\nA. Better for your health than foods with no genetically modified ingredients\nB. Worse for your health than foods with no genetically modified ingredients\nC. Neither better nor worse for your health than foods with no genetically modified ingredients\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.8987007141113281,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.8987007141113281,
+                "top_logprobs": {
+                  "\n": -1.8987007141113281,
+                  " D.": -2.359638214111328,
+                  " D": -2.453388214111328,
+                  " C": -2.695575714111328,
+                  " C.": -2.789325714111328,
+                  " B": -2.804950714111328,
+                  " A": -3.062763214111328,
+                  " ": -3.109638214111328,
+                  " B.": -3.523700714111328,
+                  " \"": -4.187763214111328
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.7936813831329346,
+        "request_datetime": 1679097003
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How much do you, personally, care about the issue of genetically modified foods?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A great deal"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Some"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too much"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not at all"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id28"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A great deal",
+        "B": "Some",
+        "C": "Not too much",
+        "D": "Not at all",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How much do you, personally, care about the issue of genetically modified foods?\nA. A great deal\nB. Some\nC. Not too much\nD. Not at all\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.9467774629592896,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.9467774629592896,
+                "top_logprobs": {
+                  "\n": -1.9467774629592896,
+                  " A": -2.32177734375,
+                  " ": -2.79052734375,
+                  " A.": -2.86865234375,
+                  " B": -2.97802734375,
+                  " C.": -3.43115234375,
+                  " C": -3.53271484375,
+                  " B.": -3.61083984375,
+                  " E.": -3.82177734375,
+                  " D": -3.83740234375
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.7907965183258057,
+        "request_datetime": 1679097003
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How likely is it that genetically modified foods will lead to more affordably-priced food"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Very likely"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Fairly likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not at all likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id29"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Very likely",
+        "B": "Fairly likely",
+        "C": "Not too likely",
+        "D": "Not at all likely",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How likely is it that genetically modified foods will lead to more affordably-priced food\nA. Very likely\nB. Fairly likely\nC. Not too likely\nD. Not at all likely\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -2.172919511795044,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -2.172919511795044,
+                "top_logprobs": {
+                  " A": -2.172919511795044,
+                  "\n": -2.321357011795044,
+                  " B": -2.399482011795044,
+                  " C": -2.430732011795044,
+                  " C.": -2.665107011795044,
+                  " ": -2.961982011795044,
+                  " B.": -3.094794511795044,
+                  " D": -3.126044511795044,
+                  " A.": -3.188544511795044,
+                  " Very": -3.563544511795044
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.3124818801879883,
+        "request_datetime": 1679097005
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How likely is it that genetically modified foods will lead to health problems for the population as a whole"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Very likely"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Fairly likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not at all likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id30"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Very likely",
+        "B": "Fairly likely",
+        "C": "Not too likely",
+        "D": "Not at all likely",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How likely is it that genetically modified foods will lead to health problems for the population as a whole\nA. Very likely\nB. Fairly likely\nC. Not too likely\nD. Not at all likely\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -2.1099355220794678,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -2.1099355220794678,
+                "top_logprobs": {
+                  "\n": -2.1099355220794678,
+                  " A": -2.2896230220794678,
+                  " B": -2.4146230220794678,
+                  " C": -2.5864980220794678,
+                  " C.": -2.7974355220794678,
+                  " ": -2.8599355220794678,
+                  " B.": -3.0708730220794678,
+                  " D": -3.1177480220794678,
+                  " A.": -3.4224355220794678,
+                  " E": -3.5318105220794678
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.4644448757171631,
+        "request_datetime": 1679097005
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How likely is it that genetically modified foods will create problems for the environment"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Very likely"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Fairly likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not at all likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id31"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Very likely",
+        "B": "Fairly likely",
+        "C": "Not too likely",
+        "D": "Not at all likely",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How likely is it that genetically modified foods will create problems for the environment\nA. Very likely\nB. Fairly likely\nC. Not too likely\nD. Not at all likely\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " B",
+            "logprob": -2.135361433029175,
+            "tokens": [
+              {
+                "text": " B",
+                "logprob": -2.135361433029175,
+                "top_logprobs": {
+                  " B": -2.135361433029175,
+                  "\n": -2.268173933029175,
+                  " A": -2.283798933029175,
+                  " C": -2.307236433029175,
+                  " D": -2.838486433029175,
+                  " C.": -2.869736433029175,
+                  " ": -2.971298933029175,
+                  " B.": -3.025986433029175,
+                  " E": -3.463486433029175,
+                  " A.": -3.666611433029175
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.4799230098724365,
+        "request_datetime": 1679097005
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How likely is it that genetically modified foods will increase the global food supply"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Very likely"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Fairly likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not at all likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id32"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Very likely",
+        "B": "Fairly likely",
+        "C": "Not too likely",
+        "D": "Not at all likely",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How likely is it that genetically modified foods will increase the global food supply\nA. Very likely\nB. Fairly likely\nC. Not too likely\nD. Not at all likely\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -2.1719729900360107,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -2.1719729900360107,
+                "top_logprobs": {
+                  " A": -2.1719729900360107,
+                  "\n": -2.3360354900360107,
+                  " C": -2.4532229900360107,
+                  " B": -2.4610354900360107,
+                  " C.": -2.7500979900360107,
+                  " ": -2.9297854900360107,
+                  " D": -3.0860354900360107,
+                  " B.": -3.1094729900360107,
+                  " A.": -3.1485354900360107,
+                  " Very": -3.3282229900360107
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3890817165374756,
+        "request_datetime": 1679098262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Thinking now about medicine which of these statements comes closer to your point of view, even if neither is exactly right?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Medical treatments these days are worth the costs because they allow people to live longer and better quality lives"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Medical treatments these days often create as many problems as they solve"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id33"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Medical treatments these days are worth the costs because they allow people to live longer and better quality lives",
+        "B": "Medical treatments these days often create as many problems as they solve",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Thinking now about medicine which of these statements comes closer to your point of view, even if neither is exactly right?\nA. Medical treatments these days are worth the costs because they allow people to live longer and better quality lives\nB. Medical treatments these days often create as many problems as they solve\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.9821473360061646,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.9821473360061646,
+                "top_logprobs": {
+                  "\n": -1.9821473360061646,
+                  " Refuse": -2.005584716796875,
+                  " C": -2.357147216796875,
+                  " A": -2.474334716796875,
+                  " B": -2.591522216796875,
+                  " ": -2.794647216796875,
+                  " C.": -3.099334716796875,
+                  " Medical": -3.591522216796875,
+                  " A.": -3.630584716796875,
+                  " B.": -3.904022216796875
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3916811943054199,
+        "request_datetime": 1679098262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Thinking about medical treatments these days, how much of a problem, if at all, are the following? Healthcare providers are too quick to order tests and procedures that may not be necessary"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A big problem"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "A small problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not a problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id34"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A big problem",
+        "B": "A small problem",
+        "C": "Not a problem",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Thinking about medical treatments these days, how much of a problem, if at all, are the following? Healthcare providers are too quick to order tests and procedures that may not be necessary\nA. A big problem\nB. A small problem\nC. Not a problem\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.584038496017456,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.584038496017456,
+                "top_logprobs": {
+                  " A": -1.584038496017456,
+                  "\n": -2.130913496017456,
+                  " ": -2.451225996017456,
+                  " A.": -2.935600996017456,
+                  " B": -3.162163496017456,
+                  " C": -3.396538496017456,
+                  " Refuse": -3.732475996017456,
+                  " C.": -4.013726234436035,
+                  " B.": -4.021538734436035,
+                  " D": -4.084038734436035
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.49616336822509766,
+        "request_datetime": 1679098262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Thinking about medical treatments these days, how much of a problem, if at all, are the following? People rely too much on prescription medicines that may not be necessary"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A big problem"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "A small problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not a problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id35"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A big problem",
+        "B": "A small problem",
+        "C": "Not a problem",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Thinking about medical treatments these days, how much of a problem, if at all, are the following? People rely too much on prescription medicines that may not be necessary\nA. A big problem\nB. A small problem\nC. Not a problem\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.681447982788086,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.681447982788086,
+                "top_logprobs": {
+                  " A": -1.681447982788086,
+                  "\n": -2.072072982788086,
+                  " ": -2.392385482788086,
+                  " B": -2.978322982788086,
+                  " C": -3.009572982788086,
+                  " A.": -3.345510482788086,
+                  " Refuse": -3.572072982788086,
+                  " B.": -3.814260482788086,
+                  " D": -3.853322982788086,
+                  " C.": -3.908010482788086
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.4684107303619385,
+        "request_datetime": 1679098263
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Thinking about medical treatments these days, how much of a problem, if at all, are the following? New treatments are made available before we fully understand how they affect people's health"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A big problem"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "A small problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not a problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id36"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A big problem",
+        "B": "A small problem",
+        "C": "Not a problem",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Thinking about medical treatments these days, how much of a problem, if at all, are the following? New treatments are made available before we fully understand how they affect people's health\nA. A big problem\nB. A small problem\nC. Not a problem\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.5780692100524902,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.5780692100524902,
+                "top_logprobs": {
+                  " A": -1.5780692100524902,
+                  "\n": -2.0858817100524902,
+                  " C": -2.7968192100524902,
+                  " ": -2.8671317100524902,
+                  " A.": -2.9140067100524902,
+                  " B": -2.9608817100524902,
+                  " New": -3.6952567100524902,
+                  " C.": -3.7186942100524902,
+                  " D": -3.8436942100524902,
+                  " B.": -4.17181921005249
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.37972092628479004,
+        "request_datetime": 1679098263
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Thinking about medical treatments these days, how much of a problem, if at all, are the following? The cost of treatments makes quality medical care unaffordable"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A big problem"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "A small problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not a problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id37"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A big problem",
+        "B": "A small problem",
+        "C": "Not a problem",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Thinking about medical treatments these days, how much of a problem, if at all, are the following? The cost of treatments makes quality medical care unaffordable\nA. A big problem\nB. A small problem\nC. Not a problem\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.7130671739578247,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.7130671739578247,
+                "top_logprobs": {
+                  " A": -1.7130671739578247,
+                  "\n": -2.088067054748535,
+                  " ": -2.330254554748535,
+                  " A.": -2.877129554748535,
+                  " B": -3.228692054748535,
+                  " C": -3.259942054748535,
+                  " Refuse": -3.306817054748535,
+                  " C.": -3.822442054748535,
+                  " B.": -3.963067054748535,
+                  " D": -4.127129554748535
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.33062314987182617,
+        "request_datetime": 1679098263
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Thinking about medical treatments these days, how much of a problem, if at all, are the following? New treatments are so complex that patients cannot make informed decisions"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A big problem"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "A small problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not a problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id38"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A big problem",
+        "B": "A small problem",
+        "C": "Not a problem",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Thinking about medical treatments these days, how much of a problem, if at all, are the following? New treatments are so complex that patients cannot make informed decisions\nA. A big problem\nB. A small problem\nC. Not a problem\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.658219575881958,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.658219575881958,
+                "top_logprobs": {
+                  " A": -1.658219575881958,
+                  "\n": -2.267594575881958,
+                  " ": -2.626969575881958,
+                  " C": -2.806657075881958,
+                  " B": -2.955094575881958,
+                  " A.": -3.025407075881958,
+                  " C.": -3.423844575881958,
+                  " D": -3.650407075881958,
+                  " B.": -3.908219575881958,
+                  " New": -4.048844337463379
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.406386137008667,
+        "request_datetime": 1679098263
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Thinking about medical treatments these days, how much of a problem, if at all, are the following? Side effects from prescription medicines create as many problems as the medicines solve"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A big problem"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "A small problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not a problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id39"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A big problem",
+        "B": "A small problem",
+        "C": "Not a problem",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Thinking about medical treatments these days, how much of a problem, if at all, are the following? Side effects from prescription medicines create as many problems as the medicines solve\nA. A big problem\nB. A small problem\nC. Not a problem\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.7713719606399536,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.7713719606399536,
+                "top_logprobs": {
+                  " A": -1.7713719606399536,
+                  "\n": -2.271371841430664,
+                  " B": -2.607309341430664,
+                  " C": -2.654184341430664,
+                  " ": -2.661996841430664,
+                  " Refuse": -2.951059341430664,
+                  " B.": -3.357309341430664,
+                  " D": -3.497934341430664,
+                  " A.": -3.599496841430664,
+                  " C.": -3.599496841430664
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.39208436012268066,
+        "request_datetime": 1679098263
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Thinking about medical treatments these days, how much of a problem, if at all, are the following? The process for evaluating the safety and effectiveness of new medical treatments is too slow"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A big problem"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "A small problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not a problem"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id40"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A big problem",
+        "B": "A small problem",
+        "C": "Not a problem",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Thinking about medical treatments these days, how much of a problem, if at all, are the following? The process for evaluating the safety and effectiveness of new medical treatments is too slow\nA. A big problem\nB. A small problem\nC. Not a problem\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.4798332452774048,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.4798332452774048,
+                "top_logprobs": {
+                  " A": -1.4798332452774048,
+                  "\n": -2.3079581260681152,
+                  " ": -2.6282706260681152,
+                  " C": -2.6751456260681152,
+                  " B": -2.7298331260681152,
+                  " A.": -3.1204581260681152,
+                  " D": -3.7532706260681152,
+                  " C.": -3.8079581260681152,
+                  " Refuse": -3.8782706260681152,
+                  " The": -3.9017081260681152
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3461763858795166,
+        "request_datetime": 1679098263
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How much, if anything, have you heard or read about gene editing that can be used to change a baby's genetic characteristics?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A lot"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "A little"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Nothing at all"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id41"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A lot",
+        "B": "A little",
+        "C": "Nothing at all",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How much, if anything, have you heard or read about gene editing that can be used to change a baby's genetic characteristics?\nA. A lot\nB. A little\nC. Nothing at all\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -2.0059995651245117,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -2.0059995651245117,
+                "top_logprobs": {
+                  "\n": -2.0059995651245117,
+                  " A": -2.1934995651245117,
+                  " B": -2.8731870651245117,
+                  " ": -2.8966245651245117,
+                  " C.": -2.9513120651245117,
+                  " B.": -3.0841245651245117,
+                  " C": -3.2481870651245117,
+                  " A.": -3.3653745651245117,
+                  " D.": -3.4669370651245117,
+                  " D": -3.5059995651245117
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.33963608741760254,
+        "request_datetime": 1679098263
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think changing a baby's genetic characteristics to make the baby more intelligent is an appropriate use of medical technology ?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "An appropriate use of medical technology"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Taking medical technology too far"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id42"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "An appropriate use of medical technology",
+        "B": "Taking medical technology too far",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think changing a baby's genetic characteristics to make the baby more intelligent is an appropriate use of medical technology ?\nA. An appropriate use of medical technology\nB. Taking medical technology too far\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " B",
+            "logprob": -1.9915541410446167,
+            "tokens": [
+              {
+                "text": " B",
+                "logprob": -1.9915541410446167,
+                "top_logprobs": {
+                  " B": -1.9915541410446167,
+                  "\n": -2.1243667602539062,
+                  " A": -2.1946792602539062,
+                  " C": -2.4368667602539062,
+                  " ": -2.7337417602539062,
+                  " B.": -2.8118667602539062,
+                  " A.": -3.3353042602539062,
+                  " C.": -3.7181167602539062,
+                  " D": -3.8587417602539062,
+                  " Taking": -4.124366760253906
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.31520962715148926,
+        "request_datetime": 1679098263
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think changing a baby's genetic characteristics to treat a serious disease or condition the baby would have at birth is an appropriate use of medical technology ?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "An appropriate use of medical technology"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Taking medical technology too far"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id43"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "An appropriate use of medical technology",
+        "B": "Taking medical technology too far",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think changing a baby's genetic characteristics to treat a serious disease or condition the baby would have at birth is an appropriate use of medical technology ?\nA. An appropriate use of medical technology\nB. Taking medical technology too far\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.8393964767456055,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.8393964767456055,
+                "top_logprobs": {
+                  " A": -1.8393964767456055,
+                  "\n": -1.9487714767456055,
+                  " B": -2.2065839767456055,
+                  " C": -2.6284589767456055,
+                  " A.": -2.6831464767456055,
+                  " ": -2.7143964767456055,
+                  " B.": -3.1753339767456055,
+                  " D": -3.9097089767456055,
+                  " An": -3.9175214767456055,
+                  " C.": -4.0347089767456055
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3661386966705322,
+        "request_datetime": 1679098263
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think changing a baby's genetic characteristics to reduce the risk of a serious disease or condition that could occur over the course of his or her lifetime is an appropriate use of medical technology ?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "An appropriate use of medical technology"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Taking medical technology too far"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id44"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "An appropriate use of medical technology",
+        "B": "Taking medical technology too far",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think changing a baby's genetic characteristics to reduce the risk of a serious disease or condition that could occur over the course of his or her lifetime is an appropriate use of medical technology ?\nA. An appropriate use of medical technology\nB. Taking medical technology too far\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.755704402923584,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.755704402923584,
+                "top_logprobs": {
+                  " A": -1.755704402923584,
+                  " B": -1.990079402923584,
+                  "\n": -2.349454402923584,
+                  " C": -2.451016902923584,
+                  " A.": -2.747891902923584,
+                  " ": -2.865079402923584,
+                  " B.": -3.021329402923584,
+                  " An": -3.724454402923584,
+                  " D": -3.771329402923584,
+                  " C.": -3.935391902923584
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.34122753143310547,
+        "request_datetime": 1679098264
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Thinking about what you have heard or read, how well do you think medical researchers understand the health risks and benefits of changing a baby's genetic characteristics?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Very well"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Fairly well"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too well"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not at all well"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id45"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Very well",
+        "B": "Fairly well",
+        "C": "Not too well",
+        "D": "Not at all well",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Thinking about what you have heard or read, how well do you think medical researchers understand the health risks and benefits of changing a baby's genetic characteristics?\nA. Very well\nB. Fairly well\nC. Not too well\nD. Not at all well\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.7426247596740723,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.7426247596740723,
+                "top_logprobs": {
+                  "\n": -1.7426247596740723,
+                  " B": -2.1723122596740723,
+                  " C": -2.3598122596740723,
+                  " ": -2.4066872596740723,
+                  " A": -2.4926247596740723,
+                  " D": -3.2504372596740723,
+                  " C.": -3.4301247596740723,
+                  " \"": -3.7973122596740723,
+                  " E": -3.9301247596740723,
+                  " B.": -3.9301247596740723
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.333176851272583,
+        "request_datetime": 1679098264
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How likely is the following if gene editing to change a baby's genetic characteristics becomes widely available? Even if gene editing is used appropriately in some cases, others will use these techniques in ways that are morally unacceptable"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Very likely"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Fairly likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not at all likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id46"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Very likely",
+        "B": "Fairly likely",
+        "C": "Not too likely",
+        "D": "Not at all likely",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How likely is the following if gene editing to change a baby's genetic characteristics becomes widely available? Even if gene editing is used appropriately in some cases, others will use these techniques in ways that are morally unacceptable\nA. Very likely\nB. Fairly likely\nC. Not too likely\nD. Not at all likely\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.9152683019638062,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.9152683019638062,
+                "top_logprobs": {
+                  " A": -1.9152683019638062,
+                  " B": -2.0637059211730957,
+                  " C": -2.0949559211730957,
+                  "\n": -2.1496434211730957,
+                  " D": -2.8293309211730957,
+                  " ": -2.9699559211730957,
+                  " E": -3.2590184211730957,
+                  " C.": -3.4621434211730957,
+                  " Very": -3.6105809211730957,
+                  " B.": -3.7512059211730957
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3452012538909912,
+        "request_datetime": 1679098264
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How likely is the following if gene editing to change a baby's genetic characteristics becomes widely available? These techniques will help people live longer and better quality lives"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Very likely"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Fairly likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not at all likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id47"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Very likely",
+        "B": "Fairly likely",
+        "C": "Not too likely",
+        "D": "Not at all likely",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How likely is the following if gene editing to change a baby's genetic characteristics becomes widely available? These techniques will help people live longer and better quality lives\nA. Very likely\nB. Fairly likely\nC. Not too likely\nD. Not at all likely\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.8460358381271362,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.8460358381271362,
+                "top_logprobs": {
+                  "\n": -1.8460358381271362,
+                  " A": -2.197598457336426,
+                  " C": -2.252285957336426,
+                  " B": -2.385098457336426,
+                  " ": -2.775723457336426,
+                  " D": -3.088223457336426,
+                  " C.": -3.252285957336426,
+                  " Very": -3.471035957336426,
+                  " E": -3.627285957336426,
+                  " B.": -3.681973457336426
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.3496212959289551,
+        "request_datetime": 1679098264
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How likely is the following if gene editing to change a baby's genetic characteristics becomes widely available? We will use these techniques before we fully understand how they affect people's health"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Very likely"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Fairly likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not at all likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id48"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Very likely",
+        "B": "Fairly likely",
+        "C": "Not too likely",
+        "D": "Not at all likely",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How likely is the following if gene editing to change a baby's genetic characteristics becomes widely available? We will use these techniques before we fully understand how they affect people's health\nA. Very likely\nB. Fairly likely\nC. Not too likely\nD. Not at all likely\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.6882820129394531,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.6882820129394531,
+                "top_logprobs": {
+                  "\n": -1.6882820129394531,
+                  " A": -2.071094512939453,
+                  " B": -2.446094512939453,
+                  " C": -2.492969512939453,
+                  " ": -2.821094512939453,
+                  " D": -3.305469512939453,
+                  " C.": -3.360157012939453,
+                  " Very": -3.383594512939453,
+                  " A.": -3.571094512939453,
+                  " B.": -3.742969512939453
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.34206485748291016,
+        "request_datetime": 1679098264
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How likely is the following if gene editing to change a baby's genetic characteristics becomes widely available? Inequality will increase because this option will be available only for the wealthy"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Very likely"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Fairly likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not at all likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id49"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Very likely",
+        "B": "Fairly likely",
+        "C": "Not too likely",
+        "D": "Not at all likely",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How likely is the following if gene editing to change a baby's genetic characteristics becomes widely available? Inequality will increase because this option will be available only for the wealthy\nA. Very likely\nB. Fairly likely\nC. Not too likely\nD. Not at all likely\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " B",
+            "logprob": -1.9080878496170044,
+            "tokens": [
+              {
+                "text": " B",
+                "logprob": -1.9080878496170044,
+                "top_logprobs": {
+                  " B": -1.9080878496170044,
+                  " C": -2.001837730407715,
+                  " A": -2.025275230407715,
+                  "\n": -2.126837730407715,
+                  " D": -2.759650230407715,
+                  " ": -3.079962730407715,
+                  " E": -3.119025230407715,
+                  " C.": -3.431525230407715,
+                  " B.": -3.501837730407715,
+                  " Very": -3.704962730407715
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.36410045623779297,
+        "request_datetime": 1679098264
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "How likely is the following if gene editing to change a baby's genetic characteristics becomes widely available? Development of these techniques will pave the way for new medical advances that benefit society as a whole"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Very likely"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Fairly likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not too likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not at all likely"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id50"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Very likely",
+        "B": "Fairly likely",
+        "C": "Not too likely",
+        "D": "Not at all likely",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: How likely is the following if gene editing to change a baby's genetic characteristics becomes widely available? Development of these techniques will pave the way for new medical advances that benefit society as a whole\nA. Very likely\nB. Fairly likely\nC. Not too likely\nD. Not at all likely\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.873820185661316,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.873820185661316,
+                "top_logprobs": {
+                  " A": -1.873820185661316,
+                  "\n": -2.0144453048706055,
+                  " C": -2.2097578048706055,
+                  " B": -2.2956953048706055,
+                  " ": -2.8347578048706055,
+                  " D": -2.9988203048706055,
+                  " C.": -3.2097578048706055,
+                  " Very": -3.3503828048706055,
+                  " A.": -3.5456953048706055,
+                  " B.": -3.6941328048706055
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 1.864410400390625,
+        "request_datetime": 1679098264
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "If gene editing to change a baby's genetic characteristics required testing on human embryos in order to develop these techniques, do you think this would be"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "An appropriate use of medical technology"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Taking medical technology too far"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id51"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "An appropriate use of medical technology",
+        "B": "Taking medical technology too far",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: If gene editing to change a baby's genetic characteristics required testing on human embryos in order to develop these techniques, do you think this would be\nA. An appropriate use of medical technology\nB. Taking medical technology too far\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.736562967300415,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.736562967300415,
+                "top_logprobs": {
+                  "\n": -1.736562967300415,
+                  " A": -2.377187967300415,
+                  " B": -2.564687967300415,
+                  " C": -2.783437967300415,
+                  " ": -2.900625467300415,
+                  " A.": -3.252187967300415,
+                  " C.": -3.533437967300415,
+                  " B.": -3.627187967300415,
+                  " D": -4.252187728881836,
+                  " The": -4.470937728881836
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 1.8032758235931396,
+        "request_datetime": 1679098264
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think genetic engineering of animals to increase their production of specific proteins that will lead to more nutritious meat would be"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "An appropriate use of technology"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Taking technology too far"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id52"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "An appropriate use of technology",
+        "B": "Taking technology too far",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think genetic engineering of animals to increase their production of specific proteins that will lead to more nutritious meat would be\nA. An appropriate use of technology\nB. Taking technology too far\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.7934526205062866,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.7934526205062866,
+                "top_logprobs": {
+                  "\n": -1.7934526205062866,
+                  " A": -1.9418901205062866,
+                  " B": -2.434077739715576,
+                  " ": -2.488765239715576,
+                  " C": -2.730952739715576,
+                  " A.": -2.902827739715576,
+                  " B.": -3.520015239715576,
+                  " C.": -3.988765239715576,
+                  " D": -4.293452739715576,
+                  " The": -4.543452739715576
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 1.6276545524597168,
+        "request_datetime": 1679098265
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think bringing back an animal that is currently extinct by genetically engineering a closely-related species would be"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "An appropriate use of technology"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Taking technology too far"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id53"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "An appropriate use of technology",
+        "B": "Taking technology too far",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think bringing back an animal that is currently extinct by genetically engineering a closely-related species would be\nA. An appropriate use of technology\nB. Taking technology too far\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.8324763774871826,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.8324763774871826,
+                "top_logprobs": {
+                  "\n": -1.8324763774871826,
+                  " A": -1.8793513774871826,
+                  " B": -2.4027888774871826,
+                  " C": -2.7621638774871826,
+                  " A.": -2.9340388774871826,
+                  " ": -2.9496638774871826,
+                  " B.": -3.3871638774871826,
+                  " C.": -3.5746638774871826,
+                  " D": -4.340289115905762,
+                  " All of the above": -4.480914115905762
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 1.5764765739440918,
+        "request_datetime": 1679098265
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think genetic engineering of mosquitoes that would prevent them from reproducing in order to prevent the spread of some mosquito-borne diseases would be"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "An appropriate use of technology"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Taking technology too far"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id54"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "An appropriate use of technology",
+        "B": "Taking technology too far",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think genetic engineering of mosquitoes that would prevent them from reproducing in order to prevent the spread of some mosquito-borne diseases would be\nA. An appropriate use of technology\nB. Taking technology too far\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.7581887245178223,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.7581887245178223,
+                "top_logprobs": {
+                  "\n": -1.7581887245178223,
+                  " A": -1.8988137245178223,
+                  " B": -2.3206887245178223,
+                  " ": -2.4456887245178223,
+                  " C": -2.7972512245178223,
+                  " A.": -2.8519387245178223,
+                  " B.": -3.3910012245178223,
+                  " C.": -4.078501224517822,
+                  " D": -4.211313724517822,
+                  " The": -4.531626224517822
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.33608531951904297,
+        "request_datetime": 1679098266
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think genetic engineering of animals to grow organs or tissues that can be used for humans needing a transplant would be"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "An appropriate use of technology"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Taking technology too far"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id55"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "An appropriate use of technology",
+        "B": "Taking technology too far",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think genetic engineering of animals to grow organs or tissues that can be used for humans needing a transplant would be\nA. An appropriate use of technology\nB. Taking technology too far\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.6710178852081299,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.6710178852081299,
+                "top_logprobs": {
+                  "\n": -1.6710178852081299,
+                  " A": -2.07726788520813,
+                  " B": -2.46008038520813,
+                  " ": -2.70226788520813,
+                  " C": -2.77258038520813,
+                  " A.": -3.09289288520813,
+                  " B.": -3.49133038520813,
+                  " C.": -3.96008038520813,
+                  " D": -4.389767646789551,
+                  " The": -4.514767646789551
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.4468355178833008,
+        "request_datetime": 1679098266
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you think genetic engineering of aquarium fish to change their appearance, causing them to glow would be"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "An appropriate use of technology"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Taking technology too far"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id56"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "An appropriate use of technology",
+        "B": "Taking technology too far",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you think genetic engineering of aquarium fish to change their appearance, causing them to glow would be\nA. An appropriate use of technology\nB. Taking technology too far\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.6407155990600586,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.6407155990600586,
+                "top_logprobs": {
+                  "\n": -1.6407155990600586,
+                  " B": -2.2735280990600586,
+                  " A": -2.5391530990600586,
+                  " C": -2.5938405990600586,
+                  " ": -2.8204030990600586,
+                  " A.": -3.2422780990600586,
+                  " B.": -3.2500905990600586,
+                  " C.": -3.5782155990600586,
+                  " Refuse": -4.414153099060059,
+                  " The": -4.515715599060059
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.49992990493774414,
+        "request_datetime": 1679098266
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Thinking about the development of human life on Earth which statement comes closer to your own views, even if neither is exactly right?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Humans have evolved over time"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Humans have existed in their present form since the beginning of time"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id57"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Humans have evolved over time",
+        "B": "Humans have existed in their present form since the beginning of time",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Thinking about the development of human life on Earth which statement comes closer to your own views, even if neither is exactly right?\nA. Humans have evolved over time\nB. Humans have existed in their present form since the beginning of time\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.7504839897155762,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.7504839897155762,
+                "top_logprobs": {
+                  " A": -1.7504839897155762,
+                  "\n": -1.7582964897155762,
+                  " ": -2.578608989715576,
+                  " C": -2.680171489715576,
+                  " B": -2.844233989715576,
+                  " Humans": -3.234858989715576,
+                  " A.": -3.320796489715576,
+                  " Refuse": -3.531733989715576,
+                  " C.": -3.906733989715576,
+                  " D": -4.461421489715576
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 0.4459843635559082,
+        "request_datetime": 1679098266
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Even if you are not sure, which of these is closer to your views?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Humans have evolved over time"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Humans have existed in their present form since the beginning of time"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Other view"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id58"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Humans have evolved over time",
+        "B": "Humans have existed in their present form since the beginning of time",
+        "C": "Other view",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Even if you are not sure, which of these is closer to your views?\nA. Humans have evolved over time\nB. Humans have existed in their present form since the beginning of time\nC. Other view\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.4588278532028198,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.4588278532028198,
+                "top_logprobs": {
+                  "\n": -1.4588278532028198,
+                  " A": -2.1463279724121094,
+                  " ": -2.2088279724121094,
+                  " B": -2.8963279724121094,
+                  " C": -2.9353904724121094,
+                  " A.": -3.2557029724121094,
+                  " B.": -3.5603904724121094,
+                  " C.": -3.7010154724121094,
+                  " Other": -3.8416404724121094,
+                  " Humans": -4.388515472412109
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 2.0144107341766357,
+        "request_datetime": 1679098267
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Which of these statements comes closer to your own views, even if neither is exactly right?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Humans have evolved over time due to processes such as natural selection; God or a higher power had no role in this proc"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Humans have evolved over time due to processes that were guided or allowed by God or a higher power"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id59"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Humans have evolved over time due to processes such as natural selection; God or a higher power had no role in this proc",
+        "B": "Humans have evolved over time due to processes that were guided or allowed by God or a higher power",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Which of these statements comes closer to your own views, even if neither is exactly right?\nA. Humans have evolved over time due to processes such as natural selection; God or a higher power had no role in this proc\nB. Humans have evolved over time due to processes that were guided or allowed by God or a higher power\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.7952886819839478,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.7952886819839478,
+                "top_logprobs": {
+                  "\n": -1.7952886819839478,
+                  " ": -2.045288562774658,
+                  " C.": -2.654663562774658,
+                  " A": -2.732788562774658,
+                  " C": -2.740601062774658,
+                  " Refuse": -3.099976062774658,
+                  " B": -3.201538562774658,
+                  " B.": -3.623413562774658,
+                  " A.": -3.685913562774658,
+                  " \"": -4.139038562774658
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.40889930725097656,
+        "request_datetime": 1679097005
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Thinking about the development of human life on Earth which statement comes closest to your view?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Humans have evolved over time due to processes such as natural selection; God or a higher power had no role in this proc"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Humans have evolved over time due to processes that were guided or allowed by God or a higher power"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Humans have existed in their present form since the beginning of time"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id60"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Humans have evolved over time due to processes such as natural selection; God or a higher power had no role in this proc",
+        "B": "Humans have evolved over time due to processes that were guided or allowed by God or a higher power",
+        "C": "Humans have existed in their present form since the beginning of time",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Thinking about the development of human life on Earth which statement comes closest to your view?\nA. Humans have evolved over time due to processes such as natural selection; God or a higher power had no role in this proc\nB. Humans have evolved over time due to processes that were guided or allowed by God or a higher power\nC. Humans have existed in their present form since the beginning of time\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.77113938331604,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.77113938331604,
+                "top_logprobs": {
+                  "\n": -1.77113938331604,
+                  " B": -2.22426438331604,
+                  " C": -2.22426438331604,
+                  " A": -2.25551438331604,
+                  " ": -2.75551438331604,
+                  " C.": -3.13051438331604,
+                  " D": -3.24770188331604,
+                  " B.": -3.38051438331604,
+                  "<|endoftext|>": -4.153951644897461,
+                  " D.": -4.247701644897461
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.3816525936126709,
+        "request_datetime": 1679097005
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Even if you are not sure, which statement comes closest to your view?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Humans have evolved over time due to processes such as natural selection; God or a higher power had no role in this proc"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Humans have evolved over time due to processes that were guided or allowed by God or a higher power"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Humans have existed in their present form since the beginning of time"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Other view"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id61"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Humans have evolved over time due to processes such as natural selection; God or a higher power had no role in this proc",
+        "B": "Humans have evolved over time due to processes that were guided or allowed by God or a higher power",
+        "C": "Humans have existed in their present form since the beginning of time",
+        "D": "Other view",
+        "E": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Even if you are not sure, which statement comes closest to your view?\nA. Humans have evolved over time due to processes such as natural selection; God or a higher power had no role in this proc\nB. Humans have evolved over time due to processes that were guided or allowed by God or a higher power\nC. Humans have existed in their present form since the beginning of time\nD. Other view\nE. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.1806366443634033,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.1806366443634033,
+                "top_logprobs": {
+                  "\n": -1.1806366443634033,
+                  " A": -2.4228241443634033,
+                  " ": -2.6181366443634033,
+                  " C": -2.6884491443634033,
+                  " B": -2.7118866443634033,
+                  " D": -3.5400116443634033,
+                  " Other": -3.6181366443634033,
+                  " C.": -3.6884491443634033,
+                  " B.": -3.8993866443634033,
+                  " \"": -4.172823905944824
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 1.91511869430542,
+        "request_datetime": 1679098267
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "From what you have heard or read, which of these statements about the development of human life on Earth comes closest to what most biological scientists say?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Humans have evolved over time due to processes such as natural selection"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Humans have existed in their present form since the beginning of time"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not sure"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id62"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Humans have evolved over time due to processes such as natural selection",
+        "B": "Humans have existed in their present form since the beginning of time",
+        "C": "Not sure",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: From what you have heard or read, which of these statements about the development of human life on Earth comes closest to what most biological scientists say?\nA. Humans have evolved over time due to processes such as natural selection\nB. Humans have existed in their present form since the beginning of time\nC. Not sure\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.7995778322219849,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.7995778322219849,
+                "top_logprobs": {
+                  " A": -1.7995778322219849,
+                  " A.": -2.2214527130126953,
+                  "\n": -2.2683277130126953,
+                  " B": -2.7292652130126953,
+                  " C": -2.7370777130126953,
+                  " ": -2.8698902130126953,
+                  " B.": -3.0027027130126953,
+                  " C.": -3.2370777130126953,
+                  " Biological": -3.8464527130126953,
+                  " D": -4.065202713012695
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.4779648780822754,
+        "request_datetime": 1679097005
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Even if you are not sure, from what you have heard or read, which of these statements about the development of human life on Earth comes closest to what most biological scientists say?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Humans have evolved over time due to processes such as natural selection"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "Humans have existed in their present form since the beginning of time"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id63"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Humans have evolved over time due to processes such as natural selection",
+        "B": "Humans have existed in their present form since the beginning of time",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Even if you are not sure, from what you have heard or read, which of these statements about the development of human life on Earth comes closest to what most biological scientists say?\nA. Humans have evolved over time due to processes such as natural selection\nB. Humans have existed in their present form since the beginning of time\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -1.8429653644561768,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -1.8429653644561768,
+                "top_logprobs": {
+                  " A": -1.8429653644561768,
+                  " C": -2.3820278644561768,
+                  "\n": -2.5460903644561768,
+                  " B": -2.7335903644561768,
+                  " A.": -2.8117153644561768,
+                  " ": -2.9835903644561768,
+                  " Biological": -3.2726528644561768,
+                  " C.": -3.4523403644561768,
+                  " Refuse": -3.5851528644561768,
+                  " B.": -3.6867153644561768
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.32387518882751465,
+        "request_datetime": 1679097005
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Have you seen a health care provider for an illness or medical condition in the past 12 months, or not?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Yes"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "No"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id64"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Yes",
+        "B": "No",
+        "C": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Have you seen a health care provider for an illness or medical condition in the past 12 months, or not?\nA. Yes\nB. No\nC. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.1080836057662964,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.1080836057662964,
+                "top_logprobs": {
+                  "\n": -1.1080836057662964,
+                  " A": -2.006521224975586,
+                  " Yes": -2.522146224975586,
+                  " ": -2.561208724975586,
+                  " B": -3.186208724975586,
+                  " A.": -3.303396224975586,
+                  " C": -4.170583724975586,
+                  "<|endoftext|>": -4.240896224975586,
+                  " No": -4.295583724975586,
+                  " \"": -4.373708724975586
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 1.79960298538208,
+        "request_datetime": 1679098267
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Do you, or does anyone in your immediate family, have a gene that predisposes you to a serious disease such as Alzheimer's, cancer, heart disease or sickle cell anemia?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Yes"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "No"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not sure"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id65"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Yes",
+        "B": "No",
+        "C": "Not sure",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Do you, or does anyone in your immediate family, have a gene that predisposes you to a serious disease such as Alzheimer's, cancer, heart disease or sickle cell anemia?\nA. Yes\nB. No\nC. Not sure\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": " A",
+            "logprob": -2.376657485961914,
+            "tokens": [
+              {
+                "text": " A",
+                "logprob": -2.376657485961914,
+                "top_logprobs": {
+                  " A": -2.376657485961914,
+                  " C.": -2.501657485961914,
+                  "\n": -2.532907485961914,
+                  " ": -2.900094985961914,
+                  " D.": -2.939157485961914,
+                  " B": -3.032907485961914,
+                  " A.": -3.087594985961914,
+                  " C": -3.337594985961914,
+                  " B.": -3.376657485961914,
+                  " If you": -3.415719985961914
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 1.797083854675293,
+        "request_datetime": 1679098267
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Have you, or has anyone in your immediate family, ever had a genetic test, or haven't you done this?"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Yes"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "No"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Not sure"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "Refused"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id66"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "Yes",
+        "B": "No",
+        "C": "Not sure",
+        "D": "Refused"
+      },
+      "request": {
+        "model": "ai21/j1-grande-v2-beta",
+        "embedding": false,
+        "prompt": "Question: Have you, or has anyone in your immediate family, ever had a genetic test, or haven't you done this?\nA. Yes\nB. No\nC. Not sure\nD. Refused\nAnswer:",
+        "temperature": 0,
+        "num_completions": 1,
+        "top_k_per_token": 10,
+        "max_tokens": 1,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "\n",
+            "logprob": -1.4390684366226196,
+            "tokens": [
+              {
+                "text": "\n",
+                "logprob": -1.4390684366226196,
+                "top_logprobs": {
+                  "\n": -1.4390684366226196,
+                  " A": -1.7828184366226196,
+                  " ": -2.00156831741333,
+                  " A.": -2.77500581741333,
+                  " Yes": -2.85313081741333,
+                  " B": -3.33750581741333,
+                  " C": -3.90000581741333,
+                  " \"": -4.37656831741333,
+                  " B.": -4.39219331741333,
+                  " No": -4.54063081741333
+                }
+              }
+            ],
+            "finish_reason": {
+              "reason": "length",
+              "length": 1
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 1.9253358840942383,
+        "request_datetime": 1679098269
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    }
+  ]
+}
